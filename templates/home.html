@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block topbar_actions %}<a class="btn primary" href="{{ url_for('upload_screen') }}">Upload new packet</a>{% endblock %}
+{% block content %}
+<div class="home">
+  <header class="page-header"><div class="kicker">Packet list</div><h1>Packets</h1><p class="lede">Track every new-hire packet from upload to export, and see which ones are waiting on triage, the verification sweep, or the client.</p></header>
+  <p class="screen-line">All packet reviews. Upload a new packet to begin.</p>
+  <section class="card packet-list">
+    <table>
+      <thead><tr><th>Employee</th><th>Company</th><th>Pages</th><th>Processed</th><th>Status</th><th>Progress</th></tr></thead>
+      <tbody>
+      {% for r in rows %}
+        <tr class="packet-row" data-href="{{ r.url }}" tabindex="0">
+          <td><a href="{{ r.url }}"><b>{{ r.employee }}</b></a>{% if r.demo %} <span class="demo-tag" title="Seeded example row">sample</span>{% endif %}</td>
+          <td>{{ r.company or "—" }}</td>
+          <td>{{ r.pages or "—" }}</td>
+          <td class="muted-cell">{{ r.processed_label }}</td>
+          <td><span class="status-chip s-{{ r.status|lower|replace(' ', '-') }}">{{ r.status }}</span>{% if r.detail %}<small class="status-detail">{{ r.detail }}</small>{% endif %}</td>
+          <td><span class="progress"><span style="width: {{ r.progress }}%"></span></span><small>{{ r.progress }}%</small></td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+  // The whole row opens the packet.
+  for (const row of document.querySelectorAll(".packet-row")) {
+    row.addEventListener("click", e => { if (!e.target.closest("a")) location.href = row.dataset.href; });
+    row.addEventListener("keydown", e => { if (e.key === "Enter") location.href = row.dataset.href; });
+  }
+</script>
+{% endblock %}

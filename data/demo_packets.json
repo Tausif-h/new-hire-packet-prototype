@@ -1,0 +1,14 @@
+[
+  {"id": "maria-santos", "employee": "Maria Santos", "company": "Kona Coffee Roasters", "pages": 9, "processed": "2026-10-07T16:42:00",
+   "status": "In triage", "detail": "6 items left", "progress": 38},
+  {"id": "daniel-kealoha", "employee": "Daniel Kealoha", "company": "Waikiki Surf & Sail", "pages": 8, "processed": "2026-10-07T11:15:00",
+   "status": "In verification sweep", "detail": "92 of 146", "progress": 71},
+  {"id": "priya-raman", "employee": "Priya Raman", "company": "Island Dental Group", "pages": 10, "processed": "2026-10-06T14:03:00",
+   "status": "Awaiting client", "detail": "email sent", "progress": 86},
+  {"id": "james-okafor", "employee": "James Okafor", "company": "Maui Fresh Market", "pages": 8, "processed": "2026-10-05T09:27:00",
+   "status": "Ready to export", "detail": "all items resolved", "progress": 100},
+  {"id": "emily-chen", "employee": "Emily Chen", "company": "Pali Physical Therapy", "pages": 9, "processed": "2026-10-02T15:50:00",
+   "status": "Complete", "detail": "exported Oct 3", "progress": 100},
+  {"id": "kai-nakamura", "employee": "Kai Nakamura", "company": "Lanikai Bike Rentals", "pages": 8, "processed": "2026-09-30T10:12:00",
+   "status": "Complete", "detail": "exported Oct 1", "progress": 100}
+]

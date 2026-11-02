@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Processing — Packet Review{% endblock %}
+{% block content %}
+<div class="processing card">
+  <header class="page-header"><div class="kicker">Processing</div><h1>Reading {{ filename }}</h1><p class="lede">The AI is identifying each page's form, reading its fields, and checking them for gaps and conflicts.</p></header>
+  <p class="screen-line">Extracting every form and field — the dashboard opens when it's done.</p>
+  <ul class="steps" id="steps">
+    {% for step in steps %}<li data-step="{{ step }}"><span class="step-icon"></span>{{ step }}</li>{% endfor %}
+  </ul>
+  <div class="error-box" id="error" hidden></div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+  const statusUrl = {{ url_for('api_status', job_id=job_id)|tojson }};
+  const reviewUrl = {{ url_for('review', job_id=job_id)|tojson }};
+  const rejectedUrl = {{ url_for('rejected', job_id=job_id)|tojson }};
+  const items = [...document.querySelectorAll("#steps li")];
+  const shown = new Set();  // steps already displayed with a checkmark
+  function paint(running) {
+    for (const li of items) {
+      const done = shown.has(li.dataset.step);
+      li.className = done ? "done" : li.dataset.step === running ? "running" : "";
+      li.querySelector(".step-icon").innerHTML = done ? "&#10003;" : "";
+    }
+  }
+  // The last steps finish within milliseconds of each other, faster than the 1-second poll.
+  // Reveal each newly finished step in order with a brief spinner instead of all at once.
+  async function reveal(newlyDone) {
+    for (const step of newlyDone) {
+      paint(step);
+      await new Promise(r => setTimeout(r, 350));
+      shown.add(step);
+    }
+  }
+  async function poll() {
+    try {
+      const s = await (await fetch(statusUrl, {cache: "no-store"})).json();
+      await reveal(s.done_steps.filter(step => !shown.has(step)));
+      paint(s.status === "running" ? s.step : null);
+      if (s.status === "done") { setTimeout(() => location.assign(reviewUrl), 500); return; }
+      if (s.status === "rejected") { location.assign(rejectedUrl); return; }  // not a new-hire packet
+      if (s.status === "error") {
+        const box = document.getElementById("error");
+        box.hidden = false;
+        box.textContent = `Extraction failed: ${s.error || "unknown error"}. Go back and try again.`;
+        return;
+      }
+    } catch (err) { /* transient network error: keep polling */ }
+    setTimeout(poll, 1000);
+  }
+  poll();
+</script>
+{% endblock %}

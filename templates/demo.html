@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ demo.employee }} — Packet Review{% endblock %}
+{% block content %}
+<div class="home">
+  <header class="page-header"><div class="kicker">Sample packet</div><h1>{{ demo.employee }}</h1><p class="lede">An example row from the packet list, showing the status and progress a real review would have.</p></header>
+  <p class="screen-line">Sample row for the packet list — it has no scanned pages. Upload a packet to open a live review.</p>
+  <section class="card demo-card">
+    <dl>
+      <dt>Company</dt><dd>{{ demo.company }}</dd>
+      <dt>Pages</dt><dd>{{ demo.pages }}</dd>
+      <dt>Status</dt><dd><span class="status-chip s-{{ demo.status|lower|replace(' ', '-') }}">{{ demo.status }}</span> <small>{{ demo.detail }}</small></dd>
+    </dl>
+    <p><a class="btn" href="{{ url_for('home') }}">&#8592; All packets</a> <a class="btn primary" href="{{ url_for('upload_screen') }}">Upload new packet</a></p>
+  </section>
+</div>
+{% endblock %}

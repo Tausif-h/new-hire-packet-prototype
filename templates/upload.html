@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="upload-wrap">
+  <header class="page-header"><div class="kicker">New packet</div><h1>Upload a packet</h1><p class="lede">Start a review: the AI sorts the scan into the 9 catalog forms and reads every field on them.</p></header>
+  <p class="screen-line">Choose a scanned new-hire packet PDF; you'll go to its dashboard when it's read.</p>
+  <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+    <label class="dropzone" id="dropzone">
+      <strong>Drop a new-hire packet here</strong>
+      <span>or click to choose a PDF</span>
+      <input type="file" name="packet" id="packet" accept="application/pdf,.pdf" required>
+      <div class="chosen" id="chosen"></div>
+      <div class="drop-error" id="drop-error" role="alert" {% if not error %}hidden{% endif %}>{{ error or "" }}</div>
+    </label>
+    <div class="upload-actions"><button class="btn primary" id="submit" type="submit" disabled>Upload and review</button></div>
+  </form>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+  const input = document.getElementById("packet"), zone = document.getElementById("dropzone");
+  const chosen = document.getElementById("chosen"), submit = document.getElementById("submit");
+  const dropError = document.getElementById("drop-error");
+  const NOT_A_PDF = {{ not_a_pdf|tojson }};
+  // A PDF starts with "%PDF-", whatever the file is called: check the signature, not the extension.
+  async function isPdf(file) {
+    const head = new Uint8Array(await file.slice(0, 5).arrayBuffer());
+    return String.fromCharCode(...head) === "%PDF-";
+  }
+  async function update() {
+    const file = input.files[0];
+    const ok = file && await isPdf(file);
+    dropError.hidden = !file || ok;
+    dropError.textContent = file && !ok ? NOT_A_PDF : "";
+    zone.classList.toggle("invalid", !!file && !ok);
+    chosen.textContent = ok ? `Selected: ${file.name}` : "";
+    submit.disabled = !ok;  // the drop zone stays active: choose or drop another file
+  }
+  input.addEventListener("change", update);
+  ["dragenter", "dragover"].forEach(t => zone.addEventListener(t, e => { e.preventDefault(); zone.classList.add("drag"); }));
+  ["dragleave", "drop"].forEach(t => zone.addEventListener(t, e => { e.preventDefault(); zone.classList.remove("drag"); }));
+  zone.addEventListener("drop", e => {
+    const file = e.dataTransfer.files[0];
+    if (!file) return;
+    const dt = new DataTransfer();
+    dt.items.add(file);
+    input.files = dt.files;
+    update();
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ filename }} — Packet Review{% endblock %}
+{% block content %}<div id="app"></div>{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='review.js') }}"></script>
+<script>
+  PacketReview.render(document.getElementById("app"), {{ data|tojson }}, {{ options|tojson }});
+</script>
+{% endblock %}

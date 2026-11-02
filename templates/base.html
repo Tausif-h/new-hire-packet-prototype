@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Packet Review{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='review.css') }}">
+</head>
+<body>
+<header class="topbar">
+  <nav class="topnav" aria-label="Breadcrumb">
+    <a class="brand" href="{{ url_for('home') }}"><span class="brand-mark"></span>Packet Review</a>
+    {% if crumb %}<span class="topcrumbs"><a href="{{ url_for('home') }}">Packets</a><span class="sep">/</span><b>{{ crumb }}</b></span>{% endif %}
+  </nav>
+  {% if back %}<a class="back-link" href="{{ url_for('home') }}">&#8592; All packets</a>{% endif %}
+  {% block topbar_actions %}{% endblock %}
+</header>
+<main class="page">{% block content %}{% endblock %}</main>
+{% block scripts %}{% endblock %}
+</body>
+</html>

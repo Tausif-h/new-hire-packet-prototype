@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Not a new-hire packet — Packet Review{% endblock %}
+{% block content %}
+<div class="upload-wrap rejected">
+  <header class="page-header"><div class="kicker">Upload check</div><h1>Wrong document</h1>
+    <p class="lede">This doesn't look like a new-hire packet. Please check the file and upload the correct PDF.</p></header>
+  <section class="card reject-card">
+    <p class="summary"><b>{{ filename }}</b>: fewer than 2 of the {{ catalog_count }} new-hire packet forms were found on its
+      {{ detected|length }} page{{ "" if detected|length == 1 else "s" }}, so it wasn't read and no packet was created.</p>
+    <a class="btn primary" href="{{ url_for('upload_screen') }}">Upload a different file</a>
+    <details class="detected">
+      <summary>View what was detected</summary>
+      <table>
+        <thead><tr><th>Page</th><th>Matched form</th><th>What the page looks like</th></tr></thead>
+        <tbody>
+        {% for p in detected %}
+          <tr><td>{{ p.page }}</td><td>{{ "Not a packet form" if p.form == "unidentified" else p.form }}</td><td>{{ p.seen or "—" }}</td></tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </details>
+  </section>
+</div>
+{% endblock %}

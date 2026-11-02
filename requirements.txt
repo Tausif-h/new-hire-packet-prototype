@@ -1,0 +1,4 @@
+anthropic>=1.0.0
+pdf2image>=1.17.0
+pillow>=10.0.0
+flask>=3.0

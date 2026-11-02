@@ -1,0 +1,1470 @@
+{
+  "forms": [
+    {
+      "form": "New Hire Employment Packet \u2014 Cover / Document Checklist",
+      "fields": [
+        {
+          "field": "Check if Complete \u2014 Employment Form & Agreement (pages 2-4)",
+          "required": false,
+          "reason": "(b) Assembler checklist, not filled in by the new hire. Notes: Supervisor and employee signature required.",
+          "section": "Document checklist",
+          "label": "Employment Form & Agreement (pages 2-4) row",
+          "page": 1
+        },
+        {
+          "field": "Check if Complete \u2014 Form I-9 (pages 5-6)",
+          "required": false,
+          "reason": "(b) Assembler checklist, not filled in by the new hire. Notes: Employee signature required on Section 1; supervisor signature required on Section 2.",
+          "section": "Document checklist",
+          "label": "Form I-9 (pages 5-6) row",
+          "page": 1
+        },
+        {
+          "field": "Check if Complete \u2014 Form I-9 Supplements (pages 7-8)",
+          "required": false,
+          "reason": "(b) Assembler checklist, not filled in by the new hire. Notes: Required only if applicable.",
+          "section": "Document checklist",
+          "label": "Form I-9 Supplements (pages 7-8) row",
+          "page": 1
+        },
+        {
+          "field": "Check if Complete \u2014 Federal Tax Form (W-4) (pages 9-12)",
+          "required": false,
+          "reason": "(b) Assembler checklist, not filled in by the new hire. Notes: Employee signature required.",
+          "section": "Document checklist",
+          "label": "Federal Tax Form (W-4) (pages 9-12) row",
+          "page": 1
+        },
+        {
+          "field": "Check if Complete \u2014 State Tax Form (HW-4) (pages 13-14)",
+          "required": false,
+          "reason": "(b) Assembler checklist, not filled in by the new hire. Notes: Employee signature required.",
+          "section": "Document checklist",
+          "label": "State Tax Form (HW-4) (pages 13-14) row",
+          "page": 1
+        },
+        {
+          "field": "Check if Complete \u2014 Health Insurance Marketplace Coverage Options (pages 15-17)",
+          "required": false,
+          "reason": "(b) Assembler checklist, not filled in by the new hire. Notes: Health insurance information. No signatures required.",
+          "section": "Document checklist",
+          "label": "Health Insurance Marketplace Coverage Options (pages 15-17) row",
+          "page": 1
+        },
+        {
+          "field": "Check if Complete \u2014 Health Care Waiver (HC-5) (page 18)",
+          "required": false,
+          "reason": "(b) Assembler checklist, not filled in by the new hire. Notes: Required only if employee is waiving health care benefits; employee signature required.",
+          "section": "Document checklist",
+          "label": "Health Care Waiver (HC-5) (page 18) row",
+          "page": 1
+        },
+        {
+          "field": "Check if Complete \u2014 Authorization for Direct Deposit (page 19)",
+          "required": false,
+          "reason": "(b) Assembler checklist, not filled in by the new hire. Notes: Required only if employee wants to participate in Direct Deposit; employee signature required.",
+          "section": "Document checklist",
+          "label": "Authorization for Direct Deposit (page 19) row",
+          "page": 1
+        },
+        {
+          "field": "Check if Complete \u2014 Employee Handbook Acknowledgment Form (page 20)",
+          "required": false,
+          "reason": "(b) Assembler checklist, not filled in by the new hire. Notes: Employee signature required.",
+          "section": "Document checklist",
+          "label": "Employee Handbook Acknowledgment Form (page 20) row",
+          "page": 1
+        }
+      ],
+      "short_name": "Cover Checklist",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Document checklist"
+        }
+      ]
+    },
+    {
+      "form": "Employment Form (ProService)",
+      "fields": [
+        {
+          "field": "Company",
+          "required": true,
+          "section": "Supervisor section",
+          "label": "Company",
+          "page": 1
+        },
+        {
+          "field": "Employee ID#",
+          "required": false,
+          "reason": "(b) Assigned by the employer after hire; the new hire cannot know it.",
+          "section": "Supervisor section",
+          "label": "Employee ID#",
+          "page": 1
+        },
+        {
+          "field": "Effective Date with ProService",
+          "required": true,
+          "format": "date",
+          "section": "Supervisor section",
+          "label": "Effective Date with ProService",
+          "page": 1
+        },
+        {
+          "field": "Start Date with Company",
+          "required": true,
+          "format": "date",
+          "section": "Supervisor section",
+          "label": "Start Date with Company",
+          "page": 1
+        },
+        {
+          "field": "Type and Amount of Pay \u2014 Hourly $ / per hour",
+          "required": false,
+          "condition": "Mutually exclusive: either the hourly rate or the salary amount must be provided \u2014 one pay choice is required, not both.",
+          "required_group": "Type and Amount of Pay (hourly or salary)",
+          "section": "Supervisor section",
+          "label": "Type and Amount of Pay \u2014 Hourly $ / per hour",
+          "page": 1
+        },
+        {
+          "field": "Type and Amount of Pay \u2014 Salary $ / per week",
+          "required": false,
+          "condition": "Mutually exclusive: either the hourly rate or the salary amount must be provided \u2014 one pay choice is required, not both.",
+          "required_group": "Type and Amount of Pay (hourly or salary)",
+          "section": "Supervisor section",
+          "label": "Type and Amount of Pay \u2014 Salary $ / per week",
+          "page": 1
+        },
+        {
+          "field": "Pay period \u2014 Year/Month/Week/Pay Period",
+          "required": false,
+          "section": "Supervisor section",
+          "label": "Pay period \u2014 Year/Month/Week/Pay Period",
+          "page": 1,
+          "required_if": "Type and Amount of Pay \u2014 Salary $ / per week",
+          "required_if_label": "salary selected",
+          "condition": "The Year/Month/Week/Pay Period boxes modify the Salary line (\"Salary $___ per (check one)\"): required only when a salary is given; not applicable for hourly pay.",
+          "options": [
+            "Year",
+            "Month",
+            "Week",
+            "Pay Period"
+          ]
+        },
+        {
+          "field": "Position Title",
+          "required": true,
+          "section": "Supervisor section",
+          "label": "Position Title",
+          "page": 1
+        },
+        {
+          "field": "Brief Description of Position",
+          "required": false,
+          "reason": "(b) Supplementary free-text description in the supervisor section; not needed for payroll or HRIS processing and commonly left blank.",
+          "section": "Supervisor section",
+          "label": "Brief Description of Position",
+          "page": 1
+        },
+        {
+          "field": "Job Title",
+          "required": true,
+          "section": "Supervisor section",
+          "label": "Job Title",
+          "page": 1
+        },
+        {
+          "field": "Status (Full-Time/Part-Time/Relief)",
+          "required": true,
+          "section": "Supervisor section",
+          "label": "Status (Full-Time/Part-Time/Relief)",
+          "page": 1
+        },
+        {
+          "field": "FLSA Status (Exempt/Non-Exempt)",
+          "required": true,
+          "section": "Supervisor section",
+          "label": "FLSA Status (Exempt/Non-Exempt)",
+          "page": 1
+        },
+        {
+          "field": "Organization Level 1",
+          "required": true,
+          "section": "Supervisor section",
+          "label": "Organization Level 1",
+          "page": 1
+        },
+        {
+          "field": "Organization Level 2",
+          "required": true,
+          "section": "Supervisor section",
+          "label": "Organization Level 2",
+          "page": 1
+        },
+        {
+          "field": "Organization Level 3",
+          "required": false,
+          "reason": "(a) Only applicable if the employer uses more than two organization levels.",
+          "section": "Supervisor section",
+          "label": "Organization Level 3",
+          "page": 1
+        },
+        {
+          "field": "Organization Level 4",
+          "required": false,
+          "reason": "(a) Only applicable if the employer uses more than two organization levels.",
+          "section": "Supervisor section",
+          "label": "Organization Level 4",
+          "page": 1
+        },
+        {
+          "field": "Supervisor Signature",
+          "required": true,
+          "section": "Supervisor section",
+          "label": "Supervisor Signature",
+          "page": 1
+        },
+        {
+          "field": "Date (supervisor)",
+          "required": true,
+          "format": "date",
+          "section": "Supervisor section",
+          "label": "Date",
+          "page": 1
+        },
+        {
+          "field": "Name: Last",
+          "required": true,
+          "section": "Employee section",
+          "label": "Name: Last",
+          "page": 1
+        },
+        {
+          "field": "Name: First",
+          "required": true,
+          "section": "Employee section",
+          "label": "Name: First",
+          "page": 1
+        },
+        {
+          "field": "Name: Middle Initial",
+          "required": false,
+          "reason": "(b) Only applicable to employees with a middle name; those without one leave it blank.",
+          "section": "Employee section",
+          "label": "Name: Middle Initial",
+          "page": 1
+        },
+        {
+          "field": "Other/Nicknames",
+          "required": false,
+          "reason": "(a) Only applicable if the employee uses other names; blank is the normal case.",
+          "section": "Employee section",
+          "label": "Other/Nicknames",
+          "page": 1
+        },
+        {
+          "field": "Social Security Number",
+          "required": true,
+          "format": "ssn",
+          "section": "Employee section",
+          "label": "Social Security Number",
+          "page": 1
+        },
+        {
+          "field": "Date of Birth",
+          "required": true,
+          "format": "date",
+          "section": "Employee section",
+          "label": "Date of Birth",
+          "page": 1
+        },
+        {
+          "field": "Age",
+          "required": false,
+          "reason": "(b) Redundant with Date of Birth; not needed for processing.",
+          "section": "Employee section",
+          "label": "Age",
+          "page": 1
+        },
+        {
+          "field": "Residence Address (Including Room/Apt #)",
+          "required": true,
+          "section": "Employee section",
+          "label": "Residence Address (Including Room/Apt #)",
+          "page": 1
+        },
+        {
+          "field": "City or Town",
+          "required": true,
+          "section": "Employee section",
+          "label": "City or Town",
+          "page": 1
+        },
+        {
+          "field": "State",
+          "required": true,
+          "section": "Employee section",
+          "label": "State",
+          "page": 1
+        },
+        {
+          "field": "Zip Code",
+          "required": true,
+          "format": "zip",
+          "section": "Employee section",
+          "label": "Zip Code",
+          "page": 1
+        },
+        {
+          "field": "Telephone Number",
+          "required": true,
+          "format": "phone",
+          "section": "Employee section",
+          "label": "Telephone Number",
+          "page": 1
+        },
+        {
+          "field": "Mailing Address (if different \u2014 Including Room/Apt #)",
+          "required": false,
+          "reason": "(a) Form prints 'if different'; only when the mailing address differs from the residence address.",
+          "section": "Employee section",
+          "label": "Mailing Address (if different \u2014 Including Room/Apt #)",
+          "page": 1
+        },
+        {
+          "field": "Mailing City or Town / State / Zip Code",
+          "required": false,
+          "reason": "(a) Form prints 'if different'; only when the mailing address differs from the residence address.",
+          "section": "Employee section",
+          "label": "Mailing City or Town / State / Zip Code",
+          "page": 1
+        },
+        {
+          "field": "Mobile Telephone Number",
+          "required": false,
+          "reason": "(b) Secondary contact number; the primary telephone number or email suffices.",
+          "format": "phone",
+          "section": "Employee section",
+          "label": "Mobile Telephone Number",
+          "page": 1
+        },
+        {
+          "field": "Gender (Male/Female)",
+          "required": true,
+          "section": "Employee section",
+          "label": "Gender (Male/Female)",
+          "page": 1
+        },
+        {
+          "field": "F-1 Visa \u2014 Do you have an active J-1 or F-1 Visa? (No/Yes)",
+          "required": true,
+          "section": "Employee section",
+          "label": "F-1 Visa \u2014 Do you have an active J-1 or F-1 Visa? (No/Yes)",
+          "page": 1
+        },
+        {
+          "field": "Email Address",
+          "required": true,
+          "format": "email",
+          "section": "Employee section",
+          "label": "Email Address",
+          "page": 1
+        },
+        {
+          "field": "Emergency Contact Name",
+          "required": true,
+          "section": "Employee section",
+          "label": "Emergency Contact Name",
+          "page": 1
+        },
+        {
+          "field": "Relationship",
+          "required": true,
+          "section": "Employee section",
+          "label": "Relationship",
+          "page": 1
+        },
+        {
+          "field": "Emergency Contact Phone Number",
+          "required": true,
+          "format": "phone",
+          "section": "Employee section",
+          "label": "Emergency Contact Phone Number",
+          "page": 1
+        }
+      ],
+      "short_name": "Employment Form",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Employment form"
+        }
+      ]
+    },
+    {
+      "form": "Employment Agreement",
+      "fields": [
+        {
+          "field": "Effective Date",
+          "required": true,
+          "format": "date",
+          "section": "Opening paragraph",
+          "label": "Effective Date",
+          "page": 1
+        },
+        {
+          "field": "Company (Employer)",
+          "required": true,
+          "section": "Opening paragraph",
+          "label": "Company (Employer)",
+          "page": 1
+        },
+        {
+          "field": "Employee name (You)",
+          "required": true,
+          "section": "Opening paragraph",
+          "label": "Employee name (You)",
+          "page": 1
+        },
+        {
+          "field": "Company (Employer) printed name",
+          "required": true,
+          "section": "Signature block",
+          "label": "Company (Employer) printed name",
+          "page": 2
+        },
+        {
+          "field": "Employee's Signature",
+          "required": true,
+          "section": "Signature block",
+          "label": "Employee's Signature",
+          "page": 2
+        },
+        {
+          "field": "Date",
+          "required": true,
+          "format": "date",
+          "section": "Signature block",
+          "label": "Date",
+          "page": 2
+        }
+      ],
+      "short_name": "Employment Agreement",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Agreement terms"
+        },
+        {
+          "page": 2,
+          "label": "Signature page"
+        }
+      ]
+    },
+    {
+      "form": "Form I-9 \u2014 Employment Eligibility Verification",
+      "fields": [
+        {
+          "field": "Last Name (Family Name)",
+          "required": true,
+          "section": "Section 1",
+          "label": "Last Name (Family Name)",
+          "page": 1
+        },
+        {
+          "field": "First Name (Given Name)",
+          "required": true,
+          "section": "Section 1",
+          "label": "First Name (Given Name)",
+          "page": 1
+        },
+        {
+          "field": "Middle Initial (if any)",
+          "required": false,
+          "reason": "(a) Form prints 'if any'.",
+          "section": "Section 1",
+          "label": "Middle Initial (if any)",
+          "page": 1
+        },
+        {
+          "field": "Other Last Names Used (if any)",
+          "required": false,
+          "reason": "(a) Form prints 'if any'.",
+          "section": "Section 1",
+          "label": "Other Last Names Used (if any)",
+          "page": 1
+        },
+        {
+          "field": "Address (Street Number and Name)",
+          "required": true,
+          "section": "Section 1",
+          "label": "Address (Street Number and Name)",
+          "page": 1
+        },
+        {
+          "field": "Apt. Number (if any)",
+          "required": false,
+          "reason": "(a) Form prints 'if any'.",
+          "section": "Section 1",
+          "label": "Apt. Number (if any)",
+          "page": 1
+        },
+        {
+          "field": "City or Town",
+          "required": true,
+          "section": "Section 1",
+          "label": "City or Town",
+          "page": 1
+        },
+        {
+          "field": "State",
+          "required": true,
+          "section": "Section 1",
+          "label": "State",
+          "page": 1
+        },
+        {
+          "field": "ZIP Code",
+          "required": true,
+          "format": "zip",
+          "section": "Section 1",
+          "label": "ZIP Code",
+          "page": 1
+        },
+        {
+          "field": "Date of Birth (mm/dd/yyyy)",
+          "required": true,
+          "format": "date",
+          "section": "Section 1",
+          "label": "Date of Birth (mm/dd/yyyy)",
+          "page": 1
+        },
+        {
+          "field": "U.S. Social Security Number",
+          "required": true,
+          "format": "ssn",
+          "section": "Section 1",
+          "label": "U.S. Social Security Number",
+          "page": 1
+        },
+        {
+          "field": "Employee's Email Address",
+          "required": true,
+          "format": "email",
+          "section": "Section 1",
+          "label": "Employee's Email Address",
+          "page": 1
+        },
+        {
+          "field": "Employee's Telephone Number",
+          "required": true,
+          "format": "phone",
+          "section": "Section 1",
+          "label": "Employee's Telephone Number",
+          "page": 1
+        },
+        {
+          "field": "Citizenship/immigration status (check one of 4 boxes)",
+          "required": true,
+          "condition": "At least one of the 4 boxes must be selected.",
+          "single_choice": true,
+          "options": [
+            "1. A citizen of the United States",
+            "2. A noncitizen national of the United States",
+            "3. A lawful permanent resident",
+            "4. A noncitizen (alien) authorized to work"
+          ],
+          "section": "Section 1, attestation checkboxes",
+          "label": "Citizenship/immigration status",
+          "page": 1
+        },
+        {
+          "field": "USCIS A-Number / Form I-94 Admission Number / Foreign Passport Number",
+          "required": false,
+          "required_if": "Citizenship/immigration status (check one of 4 boxes)",
+          "required_if_matches": "authorized to work|^\\s*4\\b",
+          "condition": "Required only if citizenship/immigration status box 4 (noncitizen authorized to work) is checked.",
+          "required_if_label": "status box 4 checked",
+          "section": "Section 1, attestation checkboxes (item 4)",
+          "label": "USCIS A-Number / Form I-94 / Foreign Passport Number",
+          "page": 1
+        },
+        {
+          "field": "Signature of Employee",
+          "required": true,
+          "section": "Section 1, signature line",
+          "label": "Signature of Employee",
+          "page": 1
+        },
+        {
+          "field": "Today's Date (mm/dd/yyyy) \u2014 Section 1",
+          "required": true,
+          "format": "date",
+          "section": "Section 1, signature line",
+          "label": "Today's Date (mm/dd/yyyy)",
+          "page": 1
+        },
+        {
+          "field": "Document Title 1 (List A)",
+          "required": false,
+          "condition": "Satisfied by either one List A document, or one List B document plus one List C document.",
+          "required_group": "I-9 documents (one List A, or one List B plus one List C)",
+          "group_option": "List A",
+          "section": "Section 2, List A table",
+          "label": "Document Title row",
+          "page": 1
+        },
+        {
+          "field": "Issuing Authority (List A)",
+          "required": false,
+          "condition": "Required only if a List A document is presented.",
+          "required_if": "Document Title 1 (List A)",
+          "required_if_label": "List A document given",
+          "section": "Section 2, List A table",
+          "label": "Issuing Authority row",
+          "page": 1
+        },
+        {
+          "field": "Document Number (List A)",
+          "required": false,
+          "condition": "Required only if a List A document is presented.",
+          "required_if": "Document Title 1 (List A)",
+          "required_if_label": "List A document given",
+          "section": "Section 2, List A table",
+          "label": "Document Number row",
+          "page": 1
+        },
+        {
+          "field": "Expiration Date (List A)",
+          "required": false,
+          "condition": "Required only if a List A document is presented, and optional when that document normally has no expiration date (e.g. Social Security card, birth certificate).",
+          "required_if": "Document Title 1 (List A)",
+          "required_if_label": "List A document given",
+          "optional_if_matches": "\\bsocial\\b|\\bssn?\\b|s\\.s\\. card|birth|tribal|i-197|citizen id|i-179|resident citizen|voter|school record|report card|clinic|doctor|hospital|day-?care|nursery",
+          "optional_if_label": "document has no expiration",
+          "format": "date",
+          "section": "Section 2, List A table",
+          "label": "Expiration Date row",
+          "page": 1
+        },
+        {
+          "field": "Document Title 2 (if any)",
+          "required": false,
+          "reason": "(a) Form prints 'if any'; only when presenting additional documents.",
+          "section": "Section 2, List A table",
+          "label": "Document Title 2 row",
+          "page": 1
+        },
+        {
+          "field": "Document Title 3 (if any)",
+          "required": false,
+          "reason": "(a) Form prints 'if any'; only when presenting additional documents.",
+          "section": "Section 2, List A table",
+          "label": "Document Title 3 row",
+          "page": 1
+        },
+        {
+          "field": "Document Title (List B)",
+          "required": false,
+          "required_group": "I-9 documents (one List A, or one List B plus one List C)",
+          "group_option": "List B + List C",
+          "condition": "Satisfied by either one List A document, or one List B document plus one List C document.",
+          "section": "Section 2, List B table",
+          "label": "Document Title row",
+          "page": 1
+        },
+        {
+          "field": "Issuing Authority (List B)",
+          "required": false,
+          "required_if": "Document Title (List B)",
+          "condition": "Required only if a List B document is presented.",
+          "required_if_label": "List B document given",
+          "section": "Section 2, List B table",
+          "label": "Issuing Authority row",
+          "page": 1
+        },
+        {
+          "field": "Document Number (List B)",
+          "required": false,
+          "required_if": "Document Title (List B)",
+          "condition": "Required only if a List B document is presented.",
+          "required_if_label": "List B document given",
+          "section": "Section 2, List B table",
+          "label": "Document Number row",
+          "page": 1
+        },
+        {
+          "field": "Expiration Date (List B)",
+          "required": false,
+          "required_if": "Document Title (List B)",
+          "condition": "Required only if a List B document is presented, and optional when that document normally has no expiration date (e.g. Social Security card, birth certificate).",
+          "required_if_label": "List B document given",
+          "optional_if_matches": "\\bsocial\\b|\\bssn?\\b|s\\.s\\. card|birth|tribal|i-197|citizen id|i-179|resident citizen|voter|school record|report card|clinic|doctor|hospital|day-?care|nursery",
+          "optional_if_label": "document has no expiration",
+          "format": "date",
+          "section": "Section 2, List B table",
+          "label": "Expiration Date row",
+          "page": 1
+        },
+        {
+          "field": "Document Title (List C)",
+          "required": false,
+          "required_group": "I-9 documents (one List A, or one List B plus one List C)",
+          "group_option": "List B + List C",
+          "condition": "Satisfied by either one List A document, or one List B document plus one List C document.",
+          "section": "Section 2, List C table",
+          "label": "Document Title row",
+          "page": 1
+        },
+        {
+          "field": "Issuing Authority (List C)",
+          "required": false,
+          "required_if": "Document Title (List C)",
+          "condition": "Required only if a List C document is presented.",
+          "required_if_label": "List C document given",
+          "section": "Section 2, List C table",
+          "label": "Issuing Authority row",
+          "page": 1
+        },
+        {
+          "field": "Document Number (List C)",
+          "required": false,
+          "required_if": "Document Title (List C)",
+          "condition": "Required only if a List C document is presented.",
+          "required_if_label": "List C document given",
+          "section": "Section 2, List C table",
+          "label": "Document Number row",
+          "page": 1
+        },
+        {
+          "field": "Expiration Date (List C)",
+          "required": false,
+          "required_if": "Document Title (List C)",
+          "condition": "Required only if a List C document is presented, and optional when that document normally has no expiration date (e.g. Social Security card, birth certificate).",
+          "required_if_label": "List C document given",
+          "optional_if_matches": "\\bsocial\\b|\\bssn?\\b|s\\.s\\. card|birth|tribal|i-197|citizen id|i-179|resident citizen|voter|school record|report card|clinic|doctor|hospital|day-?care|nursery",
+          "optional_if_label": "document has no expiration",
+          "format": "date",
+          "section": "Section 2, List C table",
+          "label": "Expiration Date row",
+          "page": 1
+        },
+        {
+          "field": "Additional Information",
+          "required": false,
+          "reason": "(a) Only completed when the verifier needs to note exceptions or additional details.",
+          "section": "Section 2, Additional Information box",
+          "label": "Additional Information",
+          "page": 1
+        },
+        {
+          "field": "Alternative procedure checkbox",
+          "required": false,
+          "reason": "(a) Only if the employer used the DHS-authorized alternative verification procedure.",
+          "section": "Section 2",
+          "label": "Alternative procedure checkbox",
+          "checkbox": true,
+          "page": 1
+        },
+        {
+          "field": "First Day of Employment (mm/dd/yyyy)",
+          "required": true,
+          "format": "date",
+          "section": "Section 2",
+          "label": "First Day of Employment (mm/dd/yyyy)",
+          "page": 1
+        },
+        {
+          "field": "Last Name, First Name and Title of Employer/Authorized Representative",
+          "required": true,
+          "section": "Section 2, employer certification",
+          "label": "Last Name, First Name and Title of Employer/Authorized Representative",
+          "page": 1
+        },
+        {
+          "field": "Signature of Employer/Authorized Representative",
+          "required": true,
+          "section": "Section 2, employer certification",
+          "label": "Signature of Employer/Authorized Representative",
+          "page": 1
+        },
+        {
+          "field": "Today's Date (mm/dd/yyyy) \u2014 Section 2",
+          "required": true,
+          "format": "date",
+          "section": "Section 2, employer certification",
+          "label": "Today's Date (mm/dd/yyyy)",
+          "page": 1
+        },
+        {
+          "field": "Employer's Business or Organization Name",
+          "required": true,
+          "section": "Section 2, employer certification",
+          "label": "Employer's Business or Organization Name",
+          "page": 1
+        },
+        {
+          "field": "Employer's Business or Organization Address, City or Town, State, ZIP Code",
+          "required": true,
+          "section": "Section 2, employer certification",
+          "label": "Employer's Business or Organization Address, City or Town, State, ZIP Code",
+          "page": 1
+        }
+      ],
+      "note": "Lists of Acceptable Documents page is reference-only (no input fields); extractor skips it.",
+      "short_name": "Form I-9",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Sections 1 and 2"
+        },
+        {
+          "page": 2,
+          "label": "Lists of Acceptable Documents",
+          "required": false
+        }
+      ]
+    },
+    {
+      "form": "Form W-4 \u2014 Employee's Withholding Certificate",
+      "fields": [
+        {
+          "field": "First name and middle initial (Step 1a)",
+          "required": true,
+          "section": "Step 1(a)",
+          "label": "First name and middle initial",
+          "page": 1
+        },
+        {
+          "field": "Last name (Step 1a)",
+          "required": true,
+          "section": "Step 1(a)",
+          "label": "Last name",
+          "page": 1
+        },
+        {
+          "field": "Address (Step 1a)",
+          "required": true,
+          "section": "Step 1(a)",
+          "label": "Address",
+          "page": 1
+        },
+        {
+          "field": "City, state, and ZIP code (Step 1a)",
+          "required": true,
+          "section": "Step 1(a)",
+          "label": "City, state, and ZIP code",
+          "page": 1
+        },
+        {
+          "field": "Social security number (Step 1b)",
+          "required": true,
+          "format": "ssn",
+          "section": "Step 1(b)",
+          "label": "Social security number",
+          "page": 1
+        },
+        {
+          "field": "Filing status (Step 1c) \u2014 Single or Married filing separately / Married filing jointly / Head of household",
+          "required": true,
+          "single_choice": true,
+          "options": [
+            "Single or Married filing separately",
+            "Married filing jointly or Qualifying surviving spouse",
+            "Head of household"
+          ],
+          "section": "Step 1(c)",
+          "label": "Filing status",
+          "page": 1
+        },
+        {
+          "field": "Step 2: Multiple Jobs or Spouse Works",
+          "required": false,
+          "reason": "(a) Form says 'Complete this step if you (1) hold more than one job at a time, or (2) are married filing jointly and your spouse also works.'",
+          "section": "Step 2",
+          "label": "Multiple Jobs or Spouse Works",
+          "page": 1
+        },
+        {
+          "field": "Step 3: Claim Dependent and Other Credits",
+          "required": false,
+          "reason": "(a) Only if claiming dependent and other credits; the form says to complete it for only one job.",
+          "section": "Step 3",
+          "label": "Claim Dependent and Other Credits",
+          "page": 1
+        },
+        {
+          "field": "Step 4: Other Adjustments",
+          "required": false,
+          "reason": "(a) Only if claiming other adjustments (other income, deductions, or extra withholding).",
+          "section": "Step 4",
+          "label": "Other Adjustments",
+          "page": 1
+        },
+        {
+          "field": "Exempt from withholding checkbox",
+          "required": false,
+          "reason": "(a) Only if claiming exemption from withholding.",
+          "section": "Step 4",
+          "label": "Exempt from withholding checkbox",
+          "checkbox": true,
+          "page": 1
+        },
+        {
+          "field": "Employee's signature (Step 5)",
+          "required": true,
+          "section": "Step 5",
+          "label": "Employee's signature",
+          "page": 1
+        },
+        {
+          "field": "Date (Step 5)",
+          "required": true,
+          "format": "date",
+          "section": "Step 5",
+          "label": "Date",
+          "page": 1
+        },
+        {
+          "field": "Employer's name and address (Employers Only)",
+          "required": false,
+          "reason": "(b) Section labeled 'Employers Only'; completed by the employer during processing.",
+          "section": "Employers Only",
+          "label": "Employer's name and address",
+          "page": 1
+        },
+        {
+          "field": "First date of employment (Employers Only)",
+          "required": false,
+          "reason": "(b) Section labeled 'Employers Only'; completed by the employer during processing.",
+          "format": "date",
+          "section": "Employers Only",
+          "label": "First date of employment",
+          "page": 1
+        },
+        {
+          "field": "Employer identification number EIN (Employers Only)",
+          "required": false,
+          "reason": "(b) Section labeled 'Employers Only'; the employee cannot know the company's EIN.",
+          "section": "Employers Only",
+          "label": "Employer identification number EIN",
+          "page": 1
+        }
+      ],
+      "short_name": "Form W-4",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Withholding certificate"
+        }
+      ]
+    },
+    {
+      "form": "Form HW-4 \u2014 Employee's Withholding Allowance and Status Certificate",
+      "fields": [
+        {
+          "field": "Type or print your full name (Section A, line 1)",
+          "required": true,
+          "section": "Section A",
+          "label": "Line 1: Type or print your full name",
+          "page": 1
+        },
+        {
+          "field": "Your social security number (Section A, line 2)",
+          "required": true,
+          "format": "ssn",
+          "section": "Section A",
+          "label": "Line 2: Your social security number",
+          "page": 1
+        },
+        {
+          "field": "Home address \u2014 number and street or rural route (Section A, line 3)",
+          "required": true,
+          "section": "Section A",
+          "label": "Line 3: Home address \u2014 number and street or rural route",
+          "page": 1
+        },
+        {
+          "field": "City or town, State, Postal/ZIP code (Section A, line 3)",
+          "required": true,
+          "section": "Section A",
+          "label": "Line 3: City or town, State, Postal/ZIP code",
+          "page": 1
+        },
+        {
+          "field": "Marital Status checkboxes (Section A) \u2014 Single / Married / Married but withhold at higher Single rate / Certified Disabled Person / Nonresident Military Spouse",
+          "required": true,
+          "section": "Section A",
+          "label": "Marital Status checkboxes",
+          "page": 1
+        },
+        {
+          "field": "Total number of allowances you are claiming (Section A, line 4)",
+          "required": true,
+          "section": "Section A",
+          "label": "Line 4: Total number of allowances you are claiming",
+          "page": 1
+        },
+        {
+          "field": "Additional amount, if any, you want deducted each pay period (Section A, line 5)",
+          "required": false,
+          "reason": "(a) Line 5 prints 'if any'; only if the employee wants extra withholding.",
+          "section": "Section A",
+          "label": "Line 5: Additional amount, if any, you want deducted each pay period",
+          "page": 1
+        },
+        {
+          "field": "Date (Section A)",
+          "required": true,
+          "format": "date",
+          "section": "Section A",
+          "label": "Date",
+          "page": 1
+        },
+        {
+          "field": "Signed (Section A)",
+          "required": true,
+          "section": "Section A",
+          "label": "Signed",
+          "page": 1
+        },
+        {
+          "field": "Employer's name (Section B, line 1)",
+          "required": false,
+          "reason": "(b) Section explicitly labeled 'THIS SECTION IS FOR THE EMPLOYER TO COMPLETE'.",
+          "section": "Section B",
+          "label": "Employer's name",
+          "page": 1
+        },
+        {
+          "field": "Hawaii tax identification number (Section B, line 2)",
+          "required": false,
+          "reason": "(b) Section B is 'to be completed by the employer'; the employee cannot know the company's tax ID.",
+          "section": "Section B",
+          "label": "Hawaii tax identification number",
+          "page": 1
+        },
+        {
+          "field": "Employer's address (Section B)",
+          "required": false,
+          "reason": "(b) Section explicitly labeled 'THIS SECTION IS FOR THE EMPLOYER TO COMPLETE'.",
+          "section": "Section B",
+          "label": "Employer's address",
+          "page": 1
+        },
+        {
+          "field": "City or town, state, and Postal/ZIP code (Section B)",
+          "required": false,
+          "reason": "(b) Section B is explicitly labeled 'to be completed by the employer' on the form.",
+          "section": "Section B",
+          "label": "City or town, state, and Postal/ZIP code",
+          "page": 1
+        },
+        {
+          "field": "HW-4 Worksheet to Figure Your Withholding Allowances \u2014 lines A through I",
+          "required": false,
+          "reason": "(a) Worksheet the employee keeps and does not submit; not part of the filed form.",
+          "section": "Worksheet (page 2)",
+          "label": "Lines A through I",
+          "page": 2
+        },
+        {
+          "field": "Deductions and Adjustments Worksheet \u2014 lines 1 through 8",
+          "required": false,
+          "reason": "(a) Worksheet is for the employee's own allowance calculation; the form instructs the employee to keep it and give only the certificate to the employer.",
+          "section": "Deductions and Adjustments Worksheet",
+          "label": "Lines 1 through 8",
+          "page": 2
+        }
+      ],
+      "short_name": "Form HW-4",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Certificate (Sections A and B)"
+        },
+        {
+          "page": 2,
+          "label": "Worksheets",
+          "required": false
+        }
+      ]
+    },
+    {
+      "form": "Authorization for Direct Deposit & Electronic Pay Statements",
+      "fields": [
+        {
+          "field": "Company",
+          "required": true,
+          "section": "Employee Information",
+          "label": "Company",
+          "page": 1
+        },
+        {
+          "field": "Employee Name \u2014 Last",
+          "required": true,
+          "section": "Employee Information",
+          "label": "Employee Name \u2014 Last",
+          "page": 1
+        },
+        {
+          "field": "Employee Name \u2014 First",
+          "required": true,
+          "section": "Employee Information",
+          "label": "Employee Name \u2014 First",
+          "page": 1
+        },
+        {
+          "field": "Employee Name \u2014 MI",
+          "required": false,
+          "reason": "(b) Only applicable if the employee has a middle name.",
+          "section": "Employee Information",
+          "label": "Employee Name \u2014 MI",
+          "page": 1
+        },
+        {
+          "field": "Financial Institution 1 name",
+          "required": false,
+          "section": "Financial Institution 1 block",
+          "label": "Financial institution name",
+          "required_with": [
+            "Account Type (Savings/Checking) \u2014 block 1",
+            "Amount To Deposit (Full Check Amount / Portion of Check Amount $) \u2014 block 1",
+            "Bank Transit / Routing Number \u2014 block 1",
+            "Account Number \u2014 block 1"
+          ],
+          "required_with_label": "direct deposit requested",
+          "condition": "Required only if the employee fills in direct deposit block 1 (is participating).",
+          "page": 1
+        },
+        {
+          "field": "Account Type (Savings/Checking) \u2014 block 1",
+          "required": false,
+          "section": "Financial Institution 1 block",
+          "label": "Account Type (Savings/Checking)",
+          "required_with": [
+            "Financial Institution 1 name",
+            "Amount To Deposit (Full Check Amount / Portion of Check Amount $) \u2014 block 1",
+            "Bank Transit / Routing Number \u2014 block 1",
+            "Account Number \u2014 block 1"
+          ],
+          "required_with_label": "direct deposit requested",
+          "condition": "Required only if the employee fills in direct deposit block 1 (is participating).",
+          "page": 1
+        },
+        {
+          "field": "Amount To Deposit (Full Check Amount / Portion of Check Amount $) \u2014 block 1",
+          "required": false,
+          "section": "Financial Institution 1 block",
+          "label": "Amount To Deposit (Full Check Amount / Portion of Check Amount $)",
+          "required_with": [
+            "Financial Institution 1 name",
+            "Account Type (Savings/Checking) \u2014 block 1",
+            "Bank Transit / Routing Number \u2014 block 1",
+            "Account Number \u2014 block 1"
+          ],
+          "required_with_label": "direct deposit requested",
+          "condition": "Required only if the employee fills in direct deposit block 1 (is participating).",
+          "page": 1
+        },
+        {
+          "field": "Bank Transit / Routing Number \u2014 block 1",
+          "required": false,
+          "format": "routing",
+          "section": "Financial Institution 1 block",
+          "label": "Bank Transit / Routing Number",
+          "required_with": [
+            "Financial Institution 1 name",
+            "Account Type (Savings/Checking) \u2014 block 1",
+            "Amount To Deposit (Full Check Amount / Portion of Check Amount $) \u2014 block 1",
+            "Account Number \u2014 block 1"
+          ],
+          "required_with_label": "direct deposit requested",
+          "condition": "Required only if the employee fills in direct deposit block 1 (is participating).",
+          "page": 1
+        },
+        {
+          "field": "Account Number \u2014 block 1",
+          "required": false,
+          "section": "Financial Institution 1 block",
+          "label": "Account Number",
+          "required_with": [
+            "Financial Institution 1 name",
+            "Account Type (Savings/Checking) \u2014 block 1",
+            "Amount To Deposit (Full Check Amount / Portion of Check Amount $) \u2014 block 1",
+            "Bank Transit / Routing Number \u2014 block 1"
+          ],
+          "required_with_label": "direct deposit requested",
+          "condition": "Required only if the employee fills in direct deposit block 1 (is participating).",
+          "page": 1
+        },
+        {
+          "field": "Financial Institution 2 (Optional) \u2014 name, account type, amount, routing, account",
+          "required": false,
+          "reason": "(a) The form itself labels this block \"(Optional)\".",
+          "section": "Financial Institution 2 block (optional)",
+          "label": "All fields",
+          "page": 1
+        },
+        {
+          "field": "Financial Institution 3 (Optional) \u2014 name, account type, amount, routing, account",
+          "required": false,
+          "reason": "(a) The form itself labels this block \"(Optional)\".",
+          "section": "Financial Institution 3 block (optional)",
+          "label": "All fields",
+          "page": 1
+        },
+        {
+          "field": "Cancel All My Current Direct Deposit Accounts",
+          "required": false,
+          "reason": "(a) Only if the employee is canceling existing direct deposit accounts.",
+          "section": "Cancel My Existing Direct Deposit",
+          "label": "Cancel All My Current Direct Deposit Accounts",
+          "checkbox": true,
+          "page": 1
+        },
+        {
+          "field": "Cancel Only Specific Direct Deposit Accounts",
+          "required": false,
+          "reason": "(a) Only if the employee is canceling existing direct deposit accounts.",
+          "section": "Cancel My Existing Direct Deposit",
+          "label": "Cancel Only Specific Direct Deposit Accounts",
+          "page": 1
+        },
+        {
+          "field": "Electronic Pay Statements Only (Paperless) OR Paper Copies",
+          "required": true,
+          "section": "Additional Required Information",
+          "label": "Electronic Pay Statements Only (Paperless) OR Paper Copies",
+          "page": 1
+        },
+        {
+          "field": "Signature",
+          "required": true,
+          "section": "Additional Required Information",
+          "label": "Signature",
+          "page": 1
+        },
+        {
+          "field": "Date",
+          "required": true,
+          "format": "date",
+          "section": "Additional Required Information",
+          "label": "Date",
+          "page": 1
+        }
+      ],
+      "conditional": "Required only if the employee participates in Direct Deposit.",
+      "short_name": "Direct Deposit Authorization",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Authorization"
+        }
+      ]
+    },
+    {
+      "form": "Acknowledgment of Employee Handbook",
+      "fields": [
+        {
+          "field": "Print Company Name",
+          "required": true,
+          "section": "Acknowledgment text",
+          "label": "Print Company Name",
+          "page": 1
+        },
+        {
+          "field": "Employee's Signature",
+          "required": true,
+          "section": "Signature block",
+          "label": "Employee's Signature",
+          "page": 1
+        },
+        {
+          "field": "Print Name",
+          "required": true,
+          "section": "Signature block",
+          "label": "Print Name",
+          "page": 1
+        },
+        {
+          "field": "Date",
+          "required": true,
+          "format": "date",
+          "section": "Signature block",
+          "label": "Date",
+          "page": 1
+        }
+      ],
+      "short_name": "Handbook Acknowledgment",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Acknowledgment"
+        }
+      ]
+    },
+    {
+      "form": "Form HC-5 \u2014 Employee Notification to Employer (Hawaii DOL)",
+      "fields": [
+        {
+          "field": "Employer name",
+          "required": true,
+          "section": "Employer section",
+          "label": "Employer name",
+          "page": 1
+        },
+        {
+          "field": "Employer address",
+          "required": true,
+          "section": "Employer section",
+          "label": "Employer address",
+          "page": 1
+        },
+        {
+          "field": "DOL account number",
+          "required": true,
+          "section": "Employer section",
+          "label": "DOL account number",
+          "page": 1
+        },
+        {
+          "field": "Employer phone no.",
+          "required": true,
+          "format": "phone",
+          "section": "Employer section",
+          "label": "Employer phone no.",
+          "page": 1
+        },
+        {
+          "field": "Coverage selection \u2014 checkbox 1: principal employer",
+          "required": false,
+          "condition": "One of boxes 1-5 must be selected; the group is required, not each box.",
+          "required_group": "Coverage selection (checkboxes 1-5)",
+          "single_choice": true,
+          "section": "Employee section, coverage boxes",
+          "label": "Checkbox 1: principal employer",
+          "checkbox": true,
+          "page": 1
+        },
+        {
+          "field": "Coverage selection \u2014 checkbox 2: secondary employer",
+          "required": false,
+          "condition": "One of boxes 1-5 must be selected; the group is required, not each box.",
+          "required_group": "Coverage selection (checkboxes 1-5)",
+          "single_choice": true,
+          "section": "Employee section, coverage boxes",
+          "label": "Checkbox 2: secondary employer",
+          "checkbox": true,
+          "page": 1
+        },
+        {
+          "field": "Coverage selection \u2014 checkbox 3: exempt from health care coverage",
+          "required": false,
+          "condition": "One of boxes 1-5 must be selected; the group is required, not each box.",
+          "required_group": "Coverage selection (checkboxes 1-5)",
+          "single_choice": true,
+          "section": "Employee section, coverage boxes",
+          "label": "Checkbox 3: exempt from health care coverage",
+          "checkbox": true,
+          "page": 1
+        },
+        {
+          "field": "Coverage selection \u2014 checkbox 3a-d: exemption reason sub-boxes",
+          "required": false,
+          "required_if": "Coverage selection \u2014 checkbox 3: exempt from health care coverage",
+          "condition": "Required only if coverage checkbox 3 is selected \u2014 then at least one of sub-boxes 3a-3d must be checked (more than one is allowed).",
+          "required_if_label": "checkbox 3 selected",
+          "section": "Employee section, coverage boxes",
+          "label": "Checkbox 3a-d: exemption reason sub-boxes",
+          "page": 1,
+          "options": [
+            "a. covered by a Federally established plan (e.g. Medicare, Medicaid, military)",
+            "b. covered as a dependent (e.g. spouse, child) under a qualified health care plan",
+            "c. public assistance or a State-legislated plan (e.g. MedQuest)",
+            "d. follower of a religious group (prayer or spiritual healing)"
+          ]
+        },
+        {
+          "field": "Coverage selection \u2014 checkbox 4: waive coverage from employer plan",
+          "required": false,
+          "condition": "One of boxes 1-5 must be selected; the group is required, not each box.",
+          "required_group": "Coverage selection (checkboxes 1-5)",
+          "single_choice": true,
+          "section": "Employee section, coverage boxes",
+          "label": "Checkbox 4: waive coverage from employer plan",
+          "checkbox": true,
+          "page": 1
+        },
+        {
+          "field": "Coverage selection \u2014 checkbox 5: prior exemption no longer applicable",
+          "required": false,
+          "condition": "One of boxes 1-5 must be selected; the group is required, not each box.",
+          "required_group": "Coverage selection (checkboxes 1-5)",
+          "single_choice": true,
+          "section": "Employee section, coverage boxes",
+          "label": "Checkbox 5: prior exemption no longer applicable",
+          "checkbox": true,
+          "page": 1
+        },
+        {
+          "field": "Requested effective date of coverage (checkbox 5)",
+          "required": false,
+          "required_if": "Coverage selection \u2014 checkbox 5: prior exemption no longer applicable",
+          "required_if_label": "checkbox 5 selected",
+          "condition": "Required only if coverage checkbox 5 is selected.",
+          "format": "date",
+          "section": "Employee section, coverage boxes",
+          "label": "Requested effective date of coverage",
+          "page": 1
+        },
+        {
+          "field": "Print employee name",
+          "required": true,
+          "section": "Employee signature block",
+          "label": "Print employee name",
+          "page": 1
+        },
+        {
+          "field": "Employee address",
+          "required": true,
+          "section": "Employee signature block",
+          "label": "Employee address",
+          "page": 1
+        },
+        {
+          "field": "Employee phone no.",
+          "required": true,
+          "format": "phone",
+          "section": "Employee signature block",
+          "label": "Employee phone no.",
+          "page": 1
+        },
+        {
+          "field": "Employee signature",
+          "required": true,
+          "section": "Employee signature block",
+          "label": "Employee signature",
+          "page": 1
+        },
+        {
+          "field": "Date",
+          "required": true,
+          "format": "date",
+          "section": "Employee signature block",
+          "label": "Date",
+          "page": 1
+        }
+      ],
+      "conditional": "Required only if the employee is waiving health care benefits.",
+      "short_name": "Form HC-5",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Employee notification"
+        }
+      ]
+    }
+  ]
+}
